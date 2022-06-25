@@ -47,6 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// Disable CSRF (cross site request forgery)
 		http.cors();
 		http.csrf().disable();
+		http.headers().frameOptions().disable();
 		// No session will be created or used by spring security
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.authorizeRequests().antMatchers("/api/v1/login/", "/api/v1/token-refresh/", "/api/v1/recover-password/",
