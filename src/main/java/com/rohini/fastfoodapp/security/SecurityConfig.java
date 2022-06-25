@@ -68,7 +68,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				"Access-Control-Request-Method", "Access-Control-Request-Headers", "Authorization"));
 		cc.setExposedHeaders(Arrays.asList("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
 		cc.setAllowedMethods(Arrays.asList("GET", "POST", "DELETE", "PUT", "PATCH"));
-		cc.addAllowedOrigin("http://localhost:4200");
+		cc.addAllowedOrigin("http://localhost:4200, http://rohini-mcburger.s3-website-us-east-1.amazonaws.com");
 		cc.setMaxAge(Duration.ZERO);
 		cc.setAllowCredentials(Boolean.TRUE);
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
